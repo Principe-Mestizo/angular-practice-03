@@ -1,0 +1,64 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
+
+.footer {
+    padding-top: 5rem;
+    background-color: v.$secundario;
+
+    &__heading{
+        text-align: center;
+        color: v.$blanco;
+        margin: 10px 0px;
+        @include m.tablet {
+            margin: 20px 0px;
+        }
+    }
+
+    &__grid{
+        margin-bottom: 30px;
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem;
+           
+        }
+    }
+
+    &__texto{
+        color: white;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 40px;
+        @include m.tablet {
+            text-align: start;
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__copyright{
+        text-align: center;
+        padding: 10px;
+        font-size: 2rem;
+        background-color: v.$primario;
+        color: white;
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include m.tablet {
+
+            flex-direction: column;
+        
+        }
+        
+    }
+
+
+    &__link{
+        color: white;
+        padding: 3px;
+        margin-bottom: 5px;
+    }
+}

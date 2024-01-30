@@ -1,0 +1,38 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
+
+.pasos {
+    margin-top: 5rem;
+
+    &__heading {
+        text-align: center;
+        color: v.$blanco;
+        &--descripcion {
+            font-size: 1.8rem;
+            display: block;
+
+        }
+    }
+
+    &__contenido {
+        background-color: v.$primario;
+        margin-top: -1;
+    }
+
+    &__grid{
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 3rem;
+        }
+    }
+
+    &__imagen {
+        transition: transform;
+        transition: 300ms ease-in;
+
+        &:hover {
+            transform: rotate(-4deg) scale(1.2);
+        }
+    }
+}

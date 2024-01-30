@@ -1,0 +1,72 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
+
+.descargar {
+    background-color: v.$grisClaro;
+    padding: 5rem 0;
+    &__grid{
+       @include m.tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        align-items: center;
+       }
+    }
+
+    &__imagen {
+        width: 50%;
+        margin: 5rem auto 0 auto;
+        transition-property: transform;
+        transition-duration: 300ms;
+
+        @include m.tablet { 
+            margin-top: 0;
+        }
+
+        &:hover {
+            transform: rotate(4deg) scale(1.2);
+        }
+    }
+}
+
+
+.tiendas{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+    &__heading,
+    &__texto {
+        text-align: center;
+    }
+
+    &__heading {
+        color: v.$secundario;
+        margin: 2rem 0 0 0;
+
+    }
+
+    &__texto {
+        margin-bottom: 3rem;
+    }
+
+    &__grid{
+        @include m.tablet {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+    }
+
+    &__enlace{
+        transition-property: transform;
+        transition-duration: 500ms;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

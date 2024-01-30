@@ -1,0 +1,52 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
+
+
+.repartidores {
+    background-color: #FFFFFF;
+
+    &__heading {
+        text-align: center;
+        margin: 5rem 0px;
+        color: v.$secundario;
+    }
+
+    &__grid {
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            align-items: center;
+        }
+
+    }
+
+    &__imagen {
+        margin-bottom: 40px;
+    }
+
+    &__contenido {
+        line-height: 1.5;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        p {
+            margin-bottom: 30px;
+
+            @include m.tablet {
+                margin-bottom: 15px
+            }
+
+        }
+
+
+    }
+
+    &__enlace {
+        @include m.boton(v.$primario, v.$blanco);
+    }
+
+}
